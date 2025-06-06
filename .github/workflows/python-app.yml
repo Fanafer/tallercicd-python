@@ -44,8 +44,8 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_COLOR: failure
           SLACK_MESSAGE_ON_FAILURE: |
-          :x: El pipeline de CI/CD falló en el repositorio *${{ github.repository }}*
-          :scroll: Revisa los logs en:${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            :x: El pipeline de CI/CD falló en el repositorio *${{ github.repository }}*
+            :scroll: Revisa los logs en:${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
   sonarcloud:
     name: SonarCloud
