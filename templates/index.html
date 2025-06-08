@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es" xml:lang="es">
+<head>
+  <title>Piedra, Papel o Tijeras</title>
+</head>
+<body>
+  <h1>Juguemos Piedra, Papel o Tijeras</h1>
+  <form method="post">
+    <label for="choice">Elige:</label>
+    <select name="choice" id="choice">
+      <option value="piedra">Piedra</option>
+      <option value="papel">Papel</option>
+      <option value="tijeras">Tijeras</option>
+    </select>
+    <input type="submit" value="Jugar">
+  </form>
+
+  {% if resultado %}
+    <p><strong>Tu elección:</strong> {{ jugador }}</p>
+    <p><strong>Elección del bot:</strong> {{ bot }}</p>
+    <p><strong>Resultado:</strong> {{ resultado }}</p>
+  {% endif %}
+</body>
+</html>
