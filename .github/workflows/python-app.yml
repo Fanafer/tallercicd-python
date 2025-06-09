@@ -44,7 +44,7 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_COLOR: failure
           SLACK_ICON: https://raw.githubusercontent.com/Fanafer/tallercicd-python/refs/heads/master/utn.png
-          SLACK_USERNAME: Elohim
+          SLACK_USERNAME: Dios
           SLACK_MESSAGE_ON_FAILURE: |
             :x: El pipeline de CI/CD falló en el repositorio *${{ github.repository }}*
             :scroll: Revisa los logs en:${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
@@ -93,7 +93,7 @@ jobs:
             SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
             SLACK_COLOR: good
             SLACK_ICON: https://raw.githubusercontent.com/Fanafer/tallercicd-python/refs/heads/master/utn.png
-            SLACK_USERNAME: Elohim
+            SLACK_USERNAME: Dios
             SLACK_MESSAGE: |
               ✅ El despliegue a Render fue exitoso para *${{ github.repository }}*.
               🚀 Revisión en: https://render-tallercicd-python.onrender.com/
