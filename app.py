@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, redirect, request, render_template
 import random
 
 app = Flask(__name__)
@@ -12,8 +12,11 @@ def determinar_resultado(jugador, bot):
         return "Ganaste!"
     else:
         return "Perdiste"
-
-@app.route("/", methods=["GET", "POST"])
+@app.route("/")
+def redirigir_al_juego():
+    return redirect("/jugar")
+    
+@app.route("/jugar", methods=["GET", "POST"])
 def jugar():
     resultado = jugador = bot = None
     opciones = ["piedra", "papel", "tijeras"]
