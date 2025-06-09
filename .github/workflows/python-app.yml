@@ -92,6 +92,6 @@ jobs:
             SLACK_COLOR: good
             SLACK_MESSAGE: |
               ✅ El despliegue a Render fue exitoso para *${{ github.repository }}*.
-              🚀 Revisión en: https://${{ github.repository_owner }}.onrender.com
+              🚀 Revisión en: https://render-tallercicd-python.onrender.com/
 
           
