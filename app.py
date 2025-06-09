@@ -12,6 +12,7 @@ def determinar_resultado(jugador, bot):
         return "Ganaste!"
     else:
         return "Perdiste"
+    
 @app.route("/")
 def redirigir_al_juego():
     return redirect("/jugar")
