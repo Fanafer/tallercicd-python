@@ -1,8 +1,17 @@
 # test_app.py
-from app import app
+from app import determinar_resultado
 
-def test_home():
-    tester = app.test_client()
-    response = tester.get("/")
-    assert response.status_code == 200
-    assert "¡Hola desde Flask con CI/CD!" in response.data.decode("utf-8")
+def test_empate():
+    assert determinar_resultado("piedra", "piedra") == "Empate"
+    assert determinar_resultado("papel", "papel") == "Empate"
+    assert determinar_resultado("tijeras", "tijeras") == "Empate"
+
+def test_ganar():
+    assert determinar_resultado("piedra", "tijeras") == "Ganaste!"
+    assert determinar_resultado("papel", "piedra") == "Ganaste!"
+    assert determinar_resultado("tijeras", "papel") == "Ganaste!"
+
+def test_perder():
+    assert determinar_resultado("tijeras", "piedra") == "Perdiste"
+    assert determinar_resultado("piedra", "papel") == "Perdiste"
+    assert determinar_resultado("papel", "tijeras") == "Perdiste"
