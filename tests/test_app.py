@@ -7,7 +7,7 @@ def test_empate():
     assert determinar_resultado("tijeras", "tijeras") == "Empate"
 
 def test_ganar():
-    assert determinar_resultado("piedra", "tijeras") == "perdiste!"
+    assert determinar_resultado("piedra", "tijeras") == "Ganaste!"
     assert determinar_resultado("papel", "piedra") == "Ganaste!"
     assert determinar_resultado("tijeras", "papel") == "Ganaste!"
 
